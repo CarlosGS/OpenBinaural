@@ -17,6 +17,10 @@ Acknowledgments
 The awesome ear model was designed by Jonathan March:  
 <http://www.thingiverse.com/thing:499001>  
 <http://professorgreenscreen.com/>  
+For this project, the STL had to be fixed with [FreeCAD](http://freecadweb.org/) and [Blender](http://www.blender.org/)  
+
+Great inspiration was taken from [3Dio](http://3diosound.com/).
+If you need professional quality & high-performance, check out their Free Space microphones!  
 
 
 Author & license  
