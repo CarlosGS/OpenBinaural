@@ -15,7 +15,7 @@ $fs = 0.5; // Minimum fragment size [mm]
 
 ear_rotation = -20;
 
-ear_base_diameter = 110;
+ear_base_diameter = 100;
 ear_canal_len_1 = 12;
 ear_canal_len_2 = 8;
 ear_canal_diam_1 = 7;
@@ -31,7 +31,9 @@ screw_head_diam = 8;
 screw_diam = 4;
 screw_holder_thickness = 5;
 
-screw_separation = 22;
+screw_separation = 40;
+
+ear_scale = 60/73.54;
 
 module screw_hole() {
     rotate([0,90,0]) cylinder(r=screw_diam/2,h=ear_base_thickness);
@@ -42,15 +44,15 @@ module screw_hole() {
 module ear_left() {
     rotate([0,90,0])
         rotate([0,0,90+3+ear_rotation])
-            translate([6.1,9.3,-3.01])
-                import("ear_left.stl");
+            scale(ear_scale)
+                translate([6.1,9.3,-3.01])
+                    import("ear_left.stl");
 }
 
 module ear_left_full() {
     difference() {
         union() {
-            translate([0,0,0])
-                ear_left();
+            ear_left();
             intersection() {
                 rotate([0,-90,0])
                     hull() {
@@ -62,7 +64,7 @@ module ear_left_full() {
                     }
                 translate([-ear_base_thickness,0,0])
                     sphere(r=ear_base_diameter/2);
-                translate([-ear_base_thickness+ear_base_diameter/2-3,0,0])
+                translate([-ear_base_thickness+ear_base_diameter/2,0,0])
                     sphere(r=ear_base_diameter/2+20);
             }
         }
@@ -71,7 +73,7 @@ module ear_left_full() {
         difference() {
             union(){
                 hull() {
-                    sphere(r=5.5);
+                    sphere(r=5.5*ear_scale);
                     translate([-ear_canal_len_1,0,ear_canal_bump_height])
                         sphere(r=ear_canal_diam_1/2);
                 }
@@ -81,21 +83,21 @@ module ear_left_full() {
                     translate([-ear_canal_len_1-ear_canal_len_2,0,0])
                         sphere(r=mic_diam/2);
                 }
-                
                 translate([-ear_canal_len_1-ear_canal_len_2,0,0])
                         rotate([0,20,0]) 
                             rotate([0,-90,0]) cylinder(r=mic_diam/2, h=mic_len*1.5);
             }
+            // Bump to limit microphone depth
             translate([-ear_canal_len_1-ear_canal_len_2,0,mic_diam/2+0.3])
                 rotate([90,0,0]) cylinder(r=1.5/2,h=mic_diam,center=true);
         }
         
         translate([-ear_base_thickness-0.1,0,0]) {
-            translate([0,-screw_separation,screw_separation])
+            translate([0,-screw_separation/2,screw_separation/2])
                 screw_hole();
-            translate([0,-screw_separation,-screw_separation])
+            translate([0,-screw_separation/2,-screw_separation/2])
                 screw_hole();
-            translate([0,screw_separation,-screw_separation])
+            translate([0,screw_separation/2,-screw_separation/2])
                 screw_hole();
         }
     }
@@ -108,11 +110,11 @@ module ear_right_full() {
 
 
 
-ear_separation = 125;
+ear_separation = 136;
 
 
 // Draw the canal section
-//projection(cut=true) rotate([-90,0,0]) ear_left_full();
+//!projection(cut=true) rotate([-90,0,0]) ear_left_full();
 
 // Draw the head (assuming it is a sphere)
 //#sphere(r=140/2);
@@ -125,11 +127,16 @@ translate([-ear_separation/2,0,0])
 
 // Wood parts
 wood_thickness = 10;
+wood_length = ear_separation-ear_base_thickness*2;
 color("brown")
 union() {
-    translate([0,0,-screw_separation])
-        cube([ear_separation-ear_base_thickness*2,screw_separation*2+wood_thickness,wood_thickness], center=true);
+    translate([0,0,-screw_separation/2])
+        cube([wood_length,screw_separation+wood_thickness,wood_thickness], center=true);
     rotate([-90,0,0])
-        translate([0,0,-screw_separation])
-            cube([ear_separation-ear_base_thickness*2,screw_separation*2+wood_thickness,wood_thickness], center=true);
+        translate([0,0,-screw_separation/2])
+            cube([wood_length,screw_separation+wood_thickness,wood_thickness], center=true);
 }
+
+echo("Wood piece length:");
+echo(wood_length);
+echo("mm");
