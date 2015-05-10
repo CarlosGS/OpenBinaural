@@ -3,7 +3,11 @@ Low-cost 3D-printable binaural microphone
 
 **Work in progress**  
 
+
 ![ScreenShot](pictures/binauralMic.png)  
+
+Detailed ear canal
+--
 ![ScreenShot](pictures/earCanal.png)  
 ![ScreenShot](pictures/earCanal_detail.png)  
 
