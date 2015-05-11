@@ -62,8 +62,10 @@ module ear_left_full() {
                     translate([0,0,ear_base_thickness])
                         cylinder(r=ear_base_diameter/2+4,h=0.01,center=true);
                     }
+                // Define the ear circular base
                 translate([-ear_base_thickness,0,0])
                     sphere(r=ear_base_diameter/2);
+                // Bevel
                 translate([-ear_base_thickness+ear_base_diameter/2,0,0])
                     sphere(r=ear_base_diameter/2+20);
             }
@@ -84,8 +86,15 @@ module ear_left_full() {
                         sphere(r=mic_diam/2);
                 }
                 translate([-ear_canal_len_1-ear_canal_len_2,0,0])
-                        rotate([0,20,0]) 
+                        rotate([0,20,0]) {
+                            // Hole for the microphone
                             rotate([0,-90,0]) cylinder(r=mic_diam/2, h=mic_len*1.5);
+                            // Bevel
+                            translate([-mic_len,0,0])
+                                rotate([0,-20,0])
+                                    translate([-3,0,0])
+                                        sphere(r=mic_diam/2+1.5);
+                        }
             }
             // Bump to limit microphone depth
             translate([-ear_canal_len_1-ear_canal_len_2,0,mic_diam/2+0.3])
