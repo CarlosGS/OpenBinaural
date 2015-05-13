@@ -18,11 +18,13 @@ ear_rotation = -20;
 ear_base_diameter = 100;
 ear_canal_len_1 = 12;
 ear_canal_len_2 = 8;
-ear_canal_diam_1 = 7;
+ear_canal_diam_1 = 5;
+ear_canal_diam_2 = 6;
 ear_canal_bump_height = 2;
 
-mic_diam = 6.5;
+mic_diam = 10.5;
 mic_len = 8;
+mic_transition_len = 1.5;
 
 ear_base_thickness = ear_canal_len_1 + ear_canal_len_2 + mic_len;
 
@@ -45,7 +47,7 @@ module ear_left() {
     rotate([0,90,0])
         rotate([0,0,90+3+ear_rotation])
             scale(ear_scale)
-                translate([6.1,9.3,-3.01])
+                translate([8,10,-3.01])
                     import("ear_left.stl");
 }
 
@@ -74,8 +76,14 @@ module ear_left_full() {
         // Ear canal
         difference() {
             union(){
+                // Curved inner ear
+                //translate([0,2,0.5])
+                //    scale([0.5,1,1])
+                //        sphere(r=8/2);
                 hull() {
-                    sphere(r=5.5*ear_scale);
+                    rotate([ear_rotation,0,0])
+                        scale([0.5,0.5,1])
+                            sphere(r=9/2);
                     translate([-ear_canal_len_1,0,ear_canal_bump_height])
                         sphere(r=ear_canal_diam_1/2);
                 }
@@ -83,22 +91,29 @@ module ear_left_full() {
                     translate([-ear_canal_len_1,0,ear_canal_bump_height])
                         sphere(r=ear_canal_diam_1/2);
                     translate([-ear_canal_len_1-ear_canal_len_2,0,0])
-                        sphere(r=mic_diam/2);
+                        sphere(r=ear_canal_diam_2/2);
                 }
                 translate([-ear_canal_len_1-ear_canal_len_2,0,0])
                         rotate([0,20,0]) {
+                            // Transition
+                            hull() {
+                                sphere(r=ear_canal_diam_2/2);
+                                translate([-mic_transition_len,0,0])
+                                    rotate([0,90,0]) cylinder(r=mic_diam/2,h=0.01);
+                            }
                             // Hole for the microphone
-                            rotate([0,-90,0]) cylinder(r=mic_diam/2, h=mic_len*1.5);
+                            translate([-mic_transition_len,0,0])
+                                rotate([0,-90,0]) cylinder(r=mic_diam/2, h=mic_len*1.5);
                             // Bevel
-                            translate([-mic_len,0,0])
-                                rotate([0,-20,0])
-                                    translate([-3,0,0])
-                                        sphere(r=mic_diam/2+1.5);
+                            //translate([-mic_len,0,0])
+                            //    rotate([0,-20,0])
+                            //        translate([-3,0,0])
+                            //            sphere(r=mic_diam/2+1.5);
                         }
             }
             // Bump to limit microphone depth
-            translate([-ear_canal_len_1-ear_canal_len_2,0,mic_diam/2+0.3])
-                rotate([90,0,0]) cylinder(r=1.5/2,h=mic_diam,center=true);
+            //translate([-ear_canal_len_1-ear_canal_len_2,0,mic_diam/2+0.3])
+            //    rotate([90,0,0]) cylinder(r=1.5/2,h=mic_diam,center=true);
         }
         
         translate([-ear_base_thickness-0.1,0,0]) {
