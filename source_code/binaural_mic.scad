@@ -245,7 +245,7 @@ module wood_support_dxf() {
     }
 }
 
-!wood_support_dxf();
+//!wood_support_dxf();
 
 *color("brown")
 union() {
