@@ -149,10 +149,105 @@ translate([-ear_separation/2,0,0])
     ear_right_full();
 
 
+ear_base_separation = ear_separation-ear_base_thickness*2;
+
 // Wood parts
-wood_thickness = 10;
-wood_length = ear_separation-ear_base_thickness*2;
+wood_thickness = 3;
+wood_length = ear_base_separation;
+
+wood_radius = screw_head_diam/2 + 4;
+
+module wood_support_left() {
+    translate([ear_base_separation/2,0,0])
+        rotate([0,-90,0])
+            difference() {
+                union() {
+                    hull() {
+                        translate([screw_separation/2,-screw_separation/2,0])
+                            cylinder(r=wood_radius,h=wood_thickness);
+                        translate([-screw_separation/2,-screw_separation/2,wood_thickness/2])
+                                cube([wood_radius*2,wood_radius*2,wood_thickness],center=true);
+                    }
+                    hull() {
+                        translate([-screw_separation/2,-screw_separation/2,wood_thickness/2])
+                                cube([wood_radius*2,wood_radius*2,wood_thickness],center=true);
+                        translate([-screw_separation/2,screw_separation/2,0])
+                                cylinder(r=wood_radius,h=wood_thickness);
+                    }
+                }
+                // Screw holes
+                translate([screw_separation/2,-screw_separation/2,0])
+                    cylinder(r=screw_diam/2,h=wood_thickness*4,center=true);
+                translate([-screw_separation/2,-screw_separation/2,0])
+                    cylinder(r=screw_diam/2,h=wood_thickness*4,center=true);
+                translate([-screw_separation/2,screw_separation/2,0])
+                    cylinder(r=screw_diam/2,h=wood_thickness*4,center=true);
+                // Wood attachment holes
+                translate([wood_thickness,-screw_separation/2-wood_radius,0])
+                    cube([15,wood_thickness*2,wood_thickness*2],center=true);
+                translate([-screw_separation/2-wood_radius,0,0])
+                    cube([wood_thickness*2,15,wood_thickness*2],center=true);
+            }
+}
+
+module wood_support_right() {
+    mirror([1,0,0])
+        wood_support_left();
+}
+
+
+
+module wood_support_bottom() {
+    difference() {
+        translate([-ear_base_separation/2+0.005,-screw_separation/2-wood_radius+0.005,-screw_separation/2-wood_radius+0.005])
+            cube([wood_length-0.01,screw_separation-0.01,wood_thickness-0.01]);
+        wood_support_left();
+        wood_support_right();
+        // Hole for tripod mount
+        translate([0,0,-screw_separation/2-wood_radius])
+            cylinder(r=5.9/2,h=10,center=true);
+    }
+}
+
+module wood_support_top() {
+    translate([0,0,wood_thickness])
+        rotate([90,0,0])
+            rotate([0,180,0])
+                wood_support_bottom();
+}
+
+module wood_support_full() {
+    wood_support_left();
+    wood_support_right();
+    wood_support_bottom();
+    wood_support_top();
+}
+
 color("brown")
+    wood_support_full();
+
+module wood_support_dxf() {
+    projection() {
+        translate([10,-59,0])
+            rotate([0,0,90])
+                rotate([0,-90,0])
+                    wood_support_left();
+        
+        translate([-10,-59,0])
+            rotate([0,90,0])
+                wood_support_right();
+        
+        wood_support_bottom();
+        
+        translate([0,40,0])
+            rotate([-90,0,0])
+                wood_support_top();
+    }
+}
+
+!wood_support_dxf();
+
+*color("brown")
 union() {
     translate([0,0,-screw_separation/2])
         cube([wood_length,screw_separation+wood_thickness,wood_thickness], center=true);
