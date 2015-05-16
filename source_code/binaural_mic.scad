@@ -152,12 +152,19 @@ translate([-ear_separation/2,0,0])
 ear_base_separation = ear_separation-ear_base_thickness*2;
 
 // Wood parts
+tripod_hole_diam = 5.9;
+
 wood_thickness = 3;
 wood_length = ear_base_separation;
 
 wood_radius = screw_head_diam/2 + 4;
 
-module wood_support_left() {
+font = "Comfortaa:style=Bold";
+brand = "OpenBinaural";
+letter_size = 7.5;
+
+
+module wood_support_left(laser_cutter_offset=0) {
     translate([ear_base_separation/2,0,0])
         rotate([0,-90,0])
             difference() {
@@ -177,12 +184,12 @@ module wood_support_left() {
                 }
                 // Screw holes
                 translate([screw_separation/2,-screw_separation/2,0])
-                    cylinder(r=screw_diam/2,h=wood_thickness*4,center=true);
+                    cylinder(r=screw_diam/2-laser_cutter_offset,h=wood_thickness*4,center=true);
                 translate([-screw_separation/2,-screw_separation/2,0])
-                    cylinder(r=screw_diam/2,h=wood_thickness*4,center=true);
+                    cylinder(r=screw_diam/2-laser_cutter_offset,h=wood_thickness*4,center=true);
                 translate([-screw_separation/2,screw_separation/2,0])
-                    cylinder(r=screw_diam/2,h=wood_thickness*4,center=true);
-                // Wood attachment holes
+                    cylinder(r=screw_diam/2-laser_cutter_offset,h=wood_thickness*4,center=true);
+                // Wood "interlock" slots
                 translate([wood_thickness,-screw_separation/2-wood_radius,0])
                     cube([15,wood_thickness*2,wood_thickness*2],center=true);
                 translate([-screw_separation/2-wood_radius,0,0])
@@ -190,30 +197,35 @@ module wood_support_left() {
             }
 }
 
-module wood_support_right() {
+module wood_support_right(laser_cutter_offset=0) {
     mirror([1,0,0])
-        wood_support_left();
+        wood_support_left(laser_cutter_offset);
 }
 
 
 
-module wood_support_bottom() {
+module wood_support_bottom(laser_cutter_offset=0) {
     difference() {
         translate([-ear_base_separation/2+0.005,-screw_separation/2-wood_radius+0.005,-screw_separation/2-wood_radius+0.005])
             cube([wood_length-0.01,screw_separation-0.01,wood_thickness-0.01]);
-        wood_support_left();
-        wood_support_right();
+        wood_support_left(laser_cutter_offset);
+        wood_support_right(laser_cutter_offset);
         // Hole for tripod mount
         translate([0,0,-screw_separation/2-wood_radius])
-            cylinder(r=5.9/2,h=10,center=true);
+            cylinder(r=tripod_hole_diam/2-laser_cutter_offset,h=10,center=true);
+        // Text
+        translate([0,-10,-screw_separation/2-wood_radius])
+            rotate([0,180,0])
+                linear_extrude(height=2,center=true)
+                    text(brand, size = letter_size, font = font, halign = "center", valign = "center", $fn = 16);
     }
 }
 
-module wood_support_top() {
+module wood_support_top(laser_cutter_offset=0) {
     translate([0,0,wood_thickness])
         rotate([90,0,0])
             rotate([0,180,0])
-                wood_support_bottom();
+                wood_support_bottom(laser_cutter_offset);
 }
 
 module wood_support_full() {
@@ -226,26 +238,31 @@ module wood_support_full() {
 color("brown")
     wood_support_full();
 
-module wood_support_dxf() {
-    projection() {
-        translate([10,-59,0])
-            rotate([0,0,90])
-                rotate([0,-90,0])
-                    wood_support_left();
-        
-        translate([-10,-59,0])
-            rotate([0,90,0])
-                wood_support_right();
-        
-        wood_support_bottom();
-        
-        translate([0,40,0])
-            rotate([-90,0,0])
-                wood_support_top();
-    }
+module wood_support_flat(laser_cutter_offset=0) {
+    translate([10,-59,-ear_base_separation/2+0.1])
+        rotate([0,0,90])
+            rotate([0,-90,0])
+                wood_support_left(laser_cutter_offset);
+    
+    translate([-10,-59,-ear_base_separation/2+0.1])
+        rotate([0,90,0])
+            wood_support_right(laser_cutter_offset);
+    
+    translate([0,0,-screw_separation/2-wood_radius+0.1])
+        rotate([0,180,0])
+            wood_support_bottom(laser_cutter_offset);
+    
+    translate([0,40,-screw_separation/2-wood_radius+0.1])
+        rotate([-90,0,0])
+            wood_support_top(laser_cutter_offset);
 }
 
-//!wood_support_dxf();
+module wood_support_lasercut() {
+    projection(cut=true) wood_support_flat(laser_cutter_offset = 0.5);
+}
+
+//!wood_support_flat();
+//!wood_support_lasercut();
 
 *color("brown")
 union() {
