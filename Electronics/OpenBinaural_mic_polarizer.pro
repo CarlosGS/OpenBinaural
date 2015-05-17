@@ -1,4 +1,4 @@
-update=Sun 17 May 2015 12:02:27 BST
+update=Mon 18 May 2015 00:39:19 BST
 version=1
 last_client=kicad
 [eeschema]
@@ -64,3 +64,13 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
