@@ -4,6 +4,7 @@ Low-cost 3D-printable binaural microphone
 **Work in progress**  
 
 First 3D audio quality test: <https://www.youtube.com/watch?v=Pvyww-hgYPw>  
+Second test (with noise issue fixed): <https://www.youtube.com/watch?v=Wdz7qdhmqv8>  
 
 ![ScreenShot](pictures/OpenBinaural.jpg)
 ![ScreenShot](pictures/binauralMic.png)  
