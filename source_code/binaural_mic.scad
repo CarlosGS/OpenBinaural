@@ -218,7 +218,7 @@ module wood_support_param(laser_cutter_offset=0,top=false) {
                         text(brand, size = letter_size, font = font, halign = "center", valign = "center", $fn = 16);
             // Hole for potentiometer
             translate([0,0,-screw_separation/2-wood_radius]) {
-                    cylinder(r=7.2/2-laser_cutter_offset,h=10,center=true);
+                    cylinder(r=8/2-laser_cutter_offset,h=10,center=true);
                     translate([7.8,0,0])
                         cube([1.6-laser_cutter_offset,3.5-laser_cutter_offset,10],center=true);
                 }
@@ -227,7 +227,7 @@ module wood_support_param(laser_cutter_offset=0,top=false) {
                 cylinder(r=5.9/2-laser_cutter_offset,h=10,center=true);
             // Hole for switch
             translate([15+5+7,0,-screw_separation/2-wood_radius]) {
-                    cylinder(r=6.2/2-laser_cutter_offset,h=10,center=true);
+                    cylinder(r=7/2-laser_cutter_offset,h=10,center=true);
                     translate([6.5,0,0])
                         cube([1.1-laser_cutter_offset,2.5-laser_cutter_offset,10],center=true);
                 }
@@ -243,11 +243,11 @@ module wood_support_param(laser_cutter_offset=0,top=false) {
                     cylinder(r=tripod_hole_diam/2-laser_cutter_offset,h=10,center=true);
             }
             // Slot for audio cable strain relief
-            translate([-30,-10,-screw_separation/2-wood_radius])
+            translate([-30,0,-screw_separation/2-wood_radius])
                 hull() {
-                    cylinder(r=4/2-laser_cutter_offset,h=10,center=true);
+                    cylinder(r=4.1/2-laser_cutter_offset,h=10,center=true);
                     translate([0,40,0])
-                        cylinder(r=4/2-laser_cutter_offset,h=10,center=true);
+                        cylinder(r=4.1/2-laser_cutter_offset,h=10,center=true);
                 }
         }
     }
@@ -298,7 +298,7 @@ module wood_support_lasercut() {
 }
 
 //!wood_support_flat();
-!wood_support_lasercut();
+//!wood_support_lasercut();
 
 echo("Wood piece length:");
 echo(wood_length);
