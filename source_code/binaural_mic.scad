@@ -242,6 +242,13 @@ module wood_support_param(laser_cutter_offset=0,top=false) {
                 translate([0,-10,0])
                     cylinder(r=tripod_hole_diam/2-laser_cutter_offset,h=10,center=true);
             }
+            // Slot for audio cable strain relief
+            translate([-30,-10,-screw_separation/2-wood_radius])
+                hull() {
+                    cylinder(r=4/2-laser_cutter_offset,h=10,center=true);
+                    translate([0,40,0])
+                        cylinder(r=4/2-laser_cutter_offset,h=10,center=true);
+                }
         }
     }
 }
@@ -291,7 +298,7 @@ module wood_support_lasercut() {
 }
 
 //!wood_support_flat();
-//!wood_support_lasercut();
+!wood_support_lasercut();
 
 echo("Wood piece length:");
 echo(wood_length);
