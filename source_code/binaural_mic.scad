@@ -204,28 +204,57 @@ module wood_support_right(laser_cutter_offset=0) {
 
 
 
-module wood_support_bottom(laser_cutter_offset=0) {
+module wood_support_param(laser_cutter_offset=0,top=false) {
     difference() {
         translate([-ear_base_separation/2+0.005,-screw_separation/2-wood_radius+0.005,-screw_separation/2-wood_radius+0.005])
             cube([wood_length-0.01,screw_separation-0.01,wood_thickness-0.01]);
         wood_support_left(laser_cutter_offset);
         wood_support_right(laser_cutter_offset);
-        // Hole for tripod mount
-        translate([0,0,-screw_separation/2-wood_radius])
-            cylinder(r=tripod_hole_diam/2-laser_cutter_offset,h=10,center=true);
-        // Text
-        translate([0,-10,-screw_separation/2-wood_radius])
-            rotate([0,180,0])
-                linear_extrude(height=2,center=true)
-                    text(brand, size = letter_size, font = font, halign = "center", valign = "center", $fn = 16);
+        if(top) {
+            // Text
+            translate([0,-15,-screw_separation/2-wood_radius])
+                rotate([0,180,0])
+                    linear_extrude(height=2,center=true)
+                        text(brand, size = letter_size, font = font, halign = "center", valign = "center", $fn = 16);
+            // Hole for potentiometer
+            translate([0,0,-screw_separation/2-wood_radius]) {
+                    cylinder(r=7.2/2-laser_cutter_offset,h=10,center=true);
+                    translate([7.8,0,0])
+                        cube([1.6-laser_cutter_offset,3.5-laser_cutter_offset,10],center=true);
+                }
+            // Hole for LED
+            translate([15,0,-screw_separation/2-wood_radius])
+                cylinder(r=5.9/2-laser_cutter_offset,h=10,center=true);
+            // Hole for switch
+            translate([15+5+7,0,-screw_separation/2-wood_radius]) {
+                    cylinder(r=6.2/2-laser_cutter_offset,h=10,center=true);
+                    translate([6.5,0,0])
+                        cube([1.1-laser_cutter_offset,2.5-laser_cutter_offset,10],center=true);
+                }
+        } else {
+            // Hole for tripod mount
+            translate([0,0,-screw_separation/2-wood_radius]) {
+                cylinder(r=tripod_hole_diam/2-laser_cutter_offset,h=10,center=true);
+                translate([10,0,0])
+                    cylinder(r=tripod_hole_diam/2-laser_cutter_offset,h=10,center=true);
+                translate([-10,0,0])
+                    cylinder(r=tripod_hole_diam/2-laser_cutter_offset,h=10,center=true);
+                translate([0,-10,0])
+                    cylinder(r=tripod_hole_diam/2-laser_cutter_offset,h=10,center=true);
+            }
+        }
     }
+}
+
+module wood_support_bottom(laser_cutter_offset=0) {
+    wood_support_param(laser_cutter_offset,top=false);
 }
 
 module wood_support_top(laser_cutter_offset=0) {
     translate([0,0,wood_thickness])
         rotate([90,0,0])
             rotate([0,180,0])
-                wood_support_bottom(laser_cutter_offset);
+                wood_support_param(laser_cutter_offset,top=true);
 }
 
 module wood_support_full() {
@@ -263,15 +292,6 @@ module wood_support_lasercut() {
 
 //!wood_support_flat();
 //!wood_support_lasercut();
-
-*color("brown")
-union() {
-    translate([0,0,-screw_separation/2])
-        cube([wood_length,screw_separation+wood_thickness,wood_thickness], center=true);
-    rotate([-90,0,0])
-        translate([0,0,-screw_separation/2])
-            cube([wood_length,screw_separation+wood_thickness,wood_thickness], center=true);
-}
 
 echo("Wood piece length:");
 echo(wood_length);
