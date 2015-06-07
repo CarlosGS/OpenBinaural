@@ -25,6 +25,7 @@ For this project, the STL had to be fixed with [FreeCAD](http://freecadweb.org/)
 Great inspiration was taken from [3Dio](http://3diosound.com/).
 If you need professional quality & high-performance, check out their Free Space microphones!  
 
+The potentiometer knob model is derived from John Ridley's: <https://www.youmagine.com/designs/knob-for-potentiometer-parametric>
 
 Author & license  
 --
