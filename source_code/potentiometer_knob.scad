@@ -43,6 +43,6 @@ difference()
 	cylinder(d=shaftd, h=mainh+th - 1.5, $fn = 8);
 
 	// relief at bottom
-	cylinder(d=od - kd*2, h=5);
+	cylinder(d1=12,d2=od - kd*2, h=5);
 
 }
