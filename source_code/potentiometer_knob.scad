@@ -8,14 +8,14 @@ $fs = 0.5; // Minimum fragment size [mm]
 
 od = 18;
 odt = 10;
-mainh = 12;
+mainh = 0;
 th = 17.5-mainh;
 
 // knurling
-kd = (od-14)/2;
+kd = 7/2;
 kn = 10;
 
-shaftd = 7;
+shaftd = 6.5;
 
 rotate([180,0,0])
 difference()
@@ -31,8 +31,13 @@ difference()
 	// knurling
 	for (x=[0:kn])
         rotate([0,0,x * (360/kn)])
-            translate([0,od/2 + kd*.2,0])
-                cylinder(d=kd*1.5, h=mainh+th);
+            translate([0,od/2,0])
+                hull() {
+                    //rotate([10,0,0]) cylinder(d1=kd, d2=kd, h=mainh+th-1);
+                    cylinder(d=2*od/kn, h=0.01);
+                    translate([0,(odt-od)/2,mainh+th-1])
+                        cylinder(d=2*odt/kn, h=0.01);
+                }
 
 	// shaft hole
 	cylinder(d=shaftd, h=mainh+th - 1.5, $fn = 8);
