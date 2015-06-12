@@ -29,7 +29,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:stereo_mic_amplifier-cache
+LIBS:mic_amp
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -58,12 +58,12 @@ $EndComp
 $Comp
 L LED D2
 U 1 1 5576C5E6
-P 3850 1200
-F 0 "D2" V 3900 1050 50  0000 C CNN
-F 1 "LED" V 3800 1050 50  0000 C CNN
-F 2 "LEDs:LED-5MM" H 3850 1200 60  0001 C CNN
-F 3 "" H 3850 1200 60  0000 C CNN
-	1    3850 1200
+P 3850 1500
+F 0 "D2" V 3900 1350 50  0000 C CNN
+F 1 "LED" V 3800 1350 50  0000 C CNN
+F 2 "LEDs:LED-5MM" H 3850 1500 60  0001 C CNN
+F 3 "" H 3850 1500 60  0000 C CNN
+	1    3850 1500
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -301,22 +301,11 @@ F 3 "" H 3850 3500 60  0000 C CNN
 	1    3850 3500
 	0    -1   -1   0   
 $EndComp
-$Comp
-L DUAL_POT RV1
-U 1 1 5579D759
-P 5700 4950
-F 0 "RV1" H 5860 5260 50  0000 C CNN
-F 1 "Dual A100K" H 5990 4650 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Alps-RK163-double_15mm" H 5700 4950 60  0001 C CNN
-F 3 "" H 5700 4950 60  0000 C CNN
-	1    5700 4950
-	1    0    0    -1  
-$EndComp
 Text GLabel 2350 4700 2    60   BiDi ~ 0
 pot_a_L
 Text GLabel 3350 4700 2    60   BiDi ~ 0
 pot_b_L
-Text GLabel 5550 4650 0    60   BiDi ~ 0
+Text GLabel 5550 4850 0    60   BiDi ~ 0
 pot_a_L
 Text GLabel 6000 4750 2    60   BiDi ~ 0
 pot_b_L
@@ -406,12 +395,12 @@ $EndComp
 $Comp
 L R R7
 U 1 1 557A0E47
-P 3850 1550
-F 0 "R7" H 3950 1600 50  0000 C CNN
-F 1 "13.7k" H 4000 1500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 3780 1550 30  0001 C CNN
-F 3 "" H 3850 1550 30  0000 C CNN
-	1    3850 1550
+P 3850 1150
+F 0 "R7" H 3950 1200 50  0000 C CNN
+F 1 "13.7k" H 4000 1100 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 3780 1150 30  0001 C CNN
+F 3 "" H 3850 1150 30  0000 C CNN
+	1    3850 1150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -598,7 +587,7 @@ F 3 "" H 1650 5100 60  0000 C CNN
 	1    1650 5100
 	1    0    0    -1  
 $EndComp
-Text GLabel 5550 5050 0    60   BiDi ~ 0
+Text GLabel 5550 5250 0    60   BiDi ~ 0
 pot_a_R
 Text GLabel 6000 5150 2    60   BiDi ~ 0
 pot_b_R
@@ -671,4 +660,15 @@ Wire Wire Line
 Wire Wire Line
 	2900 6350 3350 6350
 Connection ~ 3350 6350
+$Comp
+L DUAL_POT_OK RV1
+U 1 1 557B37A4
+P 5700 4950
+F 0 "RV1" H 5860 5260 50  0000 C CNN
+F 1 "DUAL_POT_OK" H 5990 4650 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Alps-RK163-double_15mm" H 5700 4950 60  0001 C CNN
+F 3 "" H 5700 4950 60  0000 C CNN
+	1    5700 4950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

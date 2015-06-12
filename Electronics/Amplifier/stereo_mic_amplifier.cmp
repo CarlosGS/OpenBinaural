@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = Fri 12 Jun 2015 20:26:02 BST
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = Fri 12 Jun 2015 20:41:06 BST
 
 BeginCmp
 TimeStamp = /5576CAFC;
@@ -169,9 +169,9 @@ IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
 EndCmp
 
 BeginCmp
-TimeStamp = /5579D759;
+TimeStamp = /557B37A4;
 Reference = RV1;
-ValeurCmp = Dual A100K;
+ValeurCmp = DUAL_POT_OK;
 IdModule  = Potentiometers:Potentiometer_Alps-RK163-double_15mm;
 EndCmp
 
