@@ -1,0 +1,185 @@
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = Fri 12 Jun 2015 13:17:08 BST
+
+BeginCmp
+TimeStamp = /5576CAFC;
+Reference = C1;
+ValeurCmp = 2.2uF;
+IdModule  = Discret:C1V8;
+EndCmp
+
+BeginCmp
+TimeStamp = /557A3209;
+Reference = C2;
+ValeurCmp = 2.2uF;
+IdModule  = Discret:C1V8;
+EndCmp
+
+BeginCmp
+TimeStamp = /5576CEE3;
+Reference = C3;
+ValeurCmp = 2.2uF;
+IdModule  = Discret:C1V8;
+EndCmp
+
+BeginCmp
+TimeStamp = /5576C92C;
+Reference = C4;
+ValeurCmp = 15pF;
+IdModule  = Capacitors_ThroughHole:C_Disc_D7.5_P5;
+EndCmp
+
+BeginCmp
+TimeStamp = /557A3203;
+Reference = C5;
+ValeurCmp = 15pF;
+IdModule  = Capacitors_ThroughHole:C_Disc_D7.5_P5;
+EndCmp
+
+BeginCmp
+TimeStamp = /5576CEE9;
+Reference = C6;
+ValeurCmp = 22uF;
+IdModule  = Discret:C1V8;
+EndCmp
+
+BeginCmp
+TimeStamp = /55798F95;
+Reference = C7;
+ValeurCmp = 100nF;
+IdModule  = Capacitors_ThroughHole:C_Disc_D7.5_P5;
+EndCmp
+
+BeginCmp
+TimeStamp = /5579BDA4;
+Reference = C8;
+ValeurCmp = 2.2uF;
+IdModule  = Discret:C1V8;
+EndCmp
+
+BeginCmp
+TimeStamp = /557A3237;
+Reference = C9;
+ValeurCmp = 2.2uF;
+IdModule  = Discret:C1V8;
+EndCmp
+
+BeginCmp
+TimeStamp = /5576C83A;
+Reference = D1;
+ValeurCmp = 1N4001;
+IdModule  = Discret:D3;
+EndCmp
+
+BeginCmp
+TimeStamp = /5576C5E6;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /5576D17C;
+Reference = P1;
+ValeurCmp = mic_L;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /557A320F;
+Reference = P2;
+ValeurCmp = mic_R;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /5576C752;
+Reference = P3;
+ValeurCmp = batt;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /5576D1BA;
+Reference = P4;
+ValeurCmp = CONN_01X03;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /5579A46D;
+Reference = R1;
+ValeurCmp = 13.7k;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /557A3222;
+Reference = R2;
+ValeurCmp = 13.7k;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /55799796;
+Reference = R3;
+ValeurCmp = 100k;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5579B72C;
+Reference = R4;
+ValeurCmp = 100k;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5579BB59;
+Reference = R5;
+ValeurCmp = 51;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /557A3231;
+Reference = R6;
+ValeurCmp = 51;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /557A0E47;
+Reference = R7;
+ValeurCmp = 13.7k;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5579F1EE;
+Reference = R8;
+ValeurCmp = 100k;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /557A3247;
+Reference = R9;
+ValeurCmp = 100k;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5579D759;
+Reference = RV1;
+ValeurCmp = Dual A100K;
+IdModule  = Potentiometers:Potentiometer_Alps-RK163-double_15mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5576C3AA;
+Reference = U1;
+ValeurCmp = TL072;
+IdModule  = Sockets_DIP:DIP-8__300_ELL;
+EndCmp
+
+EndListe

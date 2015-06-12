@@ -1,8 +1,8 @@
 (export (version D)
   (design
     (source /home/carlosgs/GitRepos/OpenBinaural/Electronics/Amplifier/stereo_mic_amplifier.sch)
-    (date "Thu 11 Jun 2015 14:31:38 BST")
-    (tool "Eeschema (after 2015-may-01 BZR unknown)-product")
+    (date "Fri 12 Jun 2015 12:33:39 BST")
+    (tool "Eeschema (after 2015-mar-04 BZR unknown)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title)
@@ -187,8 +187,8 @@
         (field (name Reference) D)
         (field (name Value) D))
       (pins
-        (pin (num 1) (name K) (type passive))
-        (pin (num 2) (name A) (type passive))))
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
     (libpart (lib device) (part DUAL_POT)
       (description Potentionmetre)
       (fields
@@ -214,8 +214,8 @@
         (field (name Reference) D)
         (field (name Value) LED))
       (pins
-        (pin (num 1) (name K) (type passive))
-        (pin (num 2) (name A) (type passive))))
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
     (libpart (lib device) (part R)
       (description Resistor)
       (footprints
