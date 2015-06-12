@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/carlosgs/GitRepos/OpenBinaural/Electronics/Amplifier/stereo_mic_amplifier.sch)
-    (date "Fri 12 Jun 2015 16:51:41 BST")
+    (date "Fri 12 Jun 2015 20:32:23 BST")
     (tool "Eeschema (after 2015-mar-04 BZR unknown)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -302,10 +302,10 @@
   (libraries
     (library (logical device)
       (uri /usr/share/kicad/library/device.lib))
-    (library (logical conn)
-      (uri /usr/share/kicad/library/conn.lib))
     (library (logical linear)
-      (uri /usr/share/kicad/library/linear.lib)))
+      (uri /usr/share/kicad/library/linear.lib))
+    (library (logical conn)
+      (uri /usr/share/kicad/library/conn.lib)))
   (nets
     (net (code 1) (name +9V)
       (node (ref D2) (pin 2))
