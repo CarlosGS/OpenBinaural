@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = Fri 12 Jun 2015 20:41:06 BST
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = Sat 13 Jun 2015 00:59:45 BST
 
 BeginCmp
 TimeStamp = /5576CAFC;
@@ -137,14 +137,14 @@ BeginCmp
 TimeStamp = /5579BB59;
 Reference = R5;
 ValeurCmp = 51;
-IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+IdModule  = Resistors_ThroughHole:Resistor_Vertical_RM5mm;
 EndCmp
 
 BeginCmp
 TimeStamp = /557A3231;
 Reference = R6;
 ValeurCmp = 51;
-IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+IdModule  = Resistors_ThroughHole:Resistor_Vertical_RM5mm;
 EndCmp
 
 BeginCmp
@@ -158,14 +158,14 @@ BeginCmp
 TimeStamp = /5579F1EE;
 Reference = R8;
 ValeurCmp = 100k;
-IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+IdModule  = Resistors_ThroughHole:Resistor_Vertical_RM5mm;
 EndCmp
 
 BeginCmp
 TimeStamp = /557A3247;
 Reference = R9;
 ValeurCmp = 100k;
-IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+IdModule  = Resistors_ThroughHole:Resistor_Vertical_RM5mm;
 EndCmp
 
 BeginCmp
