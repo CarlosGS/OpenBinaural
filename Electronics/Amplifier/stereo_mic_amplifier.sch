@@ -30,6 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:mic_amp
+LIBS:stereo_mic_amplifier-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -285,10 +286,10 @@ U 1 1 5579BB59
 P 3550 3500
 F 0 "R5" V 3450 3450 50  0000 C CNN
 F 1 "51" V 3650 3500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 3480 3500 30  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Vertical_RM5mm" V 3480 3500 30  0001 C CNN
 F 3 "" H 3550 3500 30  0000 C CNN
 	1    3550 3500
-	0    1    1    0   
+	0    -1   -1   0   
 $EndComp
 $Comp
 L CP C8
@@ -332,7 +333,7 @@ U 1 1 5579F1EE
 P 4200 3650
 F 0 "R8" H 4300 3700 50  0000 C CNN
 F 1 "100k" H 4350 3600 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4130 3650 30  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Vertical_RM5mm" V 4130 3650 30  0001 C CNN
 F 3 "" H 4200 3650 30  0000 C CNN
 	1    4200 3650
 	1    0    0    -1  
@@ -532,7 +533,7 @@ U 1 1 557A3231
 P 3550 5450
 F 0 "R6" V 3450 5400 50  0000 C CNN
 F 1 "51" V 3650 5450 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 3480 5450 30  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Vertical_RM5mm" V 3480 5450 30  0001 C CNN
 F 3 "" H 3550 5450 30  0000 C CNN
 	1    3550 5450
 	0    1    1    0   
@@ -560,7 +561,7 @@ U 1 1 557A3247
 P 4200 5600
 F 0 "R9" H 4300 5650 50  0000 C CNN
 F 1 "100k" H 4350 5550 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4130 5600 30  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Vertical_RM5mm" V 4130 5600 30  0001 C CNN
 F 3 "" H 4200 5600 30  0000 C CNN
 	1    4200 5600
 	1    0    0    -1  
