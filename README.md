@@ -26,6 +26,8 @@ If you need professional quality & high-performance, check out their Free Space 
 
 The potentiometer knob model is derived from John Ridley's: <https://www.youmagine.com/designs/knob-for-potentiometer-parametric>
 
+I want to thank [Imperial College Advanced Hackspace](http://icah.org.uk/) and [Imperial College Robotics Society](http://icrobotics.co.uk/) for providing the infrastructure (tools, 3D printers, laser cutters & material resources) that made this project possible. The community that has grown upon them is just amazing.  
+
 Author & license  
 --
 Author: Carlos Garcia Saura (<http://www.carlosgs.es>)  
