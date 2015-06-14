@@ -8,6 +8,7 @@ Second test (with noise issue fixed): <https://www.youtube.com/watch?v=Wdz7qdhmq
 
 ![ScreenShot](pictures/OpenBinaural.jpg)  
 ![ScreenShot](pictures/binauralMic.png)  
+![ScreenShot](pictures/OpenBinaural_electronics.jpg)  
 
 Detailed ear canal
 --
