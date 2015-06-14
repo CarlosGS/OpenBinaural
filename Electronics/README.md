@@ -1,11 +1,11 @@
 # Stereo microphone amplifier
 
-Using the Texas Instruments example application as a base, we made a stereo circuit and control the gain by replacing R2 (75k) with a 100k dual potentiometer.  
+Stereo microphone amplifier circuit with gain control.  
 
 The circuit has been tested with the POM-5238P-R microphone capsules:  
 <http://www.puiaudio.com/product-detail.aspx?categoryId=4&partnumber=POM-5238P-R>  
 
-CNC manufacture files (gerbers, FlatCAM project & gcodes) are available in the <Gerber> folder.  
+CNC manufacture files (gerbers, FlatCAM project & gcodes) are available in the [Gerber](Gerber) folder.  
 
 Pictures  
 --
@@ -21,8 +21,9 @@ Pictures
 
 Acknowledgments  
 --
-This circuit is a derivation from the following (very useful) Texas Instruments guide:  
+This circuit is a derivation from the following -very useful- Texas Instruments guide:  
 [Single-Supply, Electret Microphone Preamplifier Reference Design](http://www.ti.com/tool/TIPD181) by John Caldwell  
+Gain control is achieved by replacing R2 (75k) with a 100k dual potentiometer.  
 
 Author & license  
 --
