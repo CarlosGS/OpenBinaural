@@ -11,11 +11,22 @@ Pictures
 --
 ![ScreenShot](pictures/stereo_mic_amplifier.png)  
 ![ScreenShot](pictures/stereo_mic_amplifier_layout.png)  
+
+
 ![ScreenShot](pictures/cnc_A_drills1.jpg)  
+Aprox milling time for 0.8mm drill: 4 minutes  
+
 ![ScreenShot](pictures/cnc_B_drills2.jpg)  
+Aprox milling time for 1.2mm drill: 2 minutes  
+
 ![ScreenShot](pictures/cnc_C_tracks1.jpg)  
+
 ![ScreenShot](pictures/cnc_D_tracks2.jpg)  
+Aprox milling time for 0.3mm copper etching: 20 minutes  
+
 ![ScreenShot](pictures/cnc_E_finalPCB.jpg)  
+Aprox milling time for 2mm edges routing: 3 minutes  
+
 ![ScreenShot](pictures/stereo_mic_amplifier_assembled1.jpg)  
 ![ScreenShot](pictures/stereo_mic_amplifier_assembled2.jpg)  
 
