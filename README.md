@@ -3,7 +3,6 @@ Low-cost 3D-printable binaural microphone.
 
 **More pictures of the assembly process coming soon**  
 
-Demo for Hackaday: <https://www.youtube.com/watch?v=aYZhYx-hUDQ>  
 Second test: <https://www.youtube.com/watch?v=Wdz7qdhmqv8>  
 First 3D audio quality test (in Spanish): <https://www.youtube.com/watch?v=Pvyww-hgYPw>  
 
