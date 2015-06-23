@@ -1,13 +1,30 @@
 # OpenBinaural
 Low-cost 3D-printable binaural microphone.  
 
-**Work in progress**  
+**More pictures of the assembly process coming soon**  
 
-First 3D audio quality test: <https://www.youtube.com/watch?v=Pvyww-hgYPw>  
-Second test (with noise issue fixed): <https://www.youtube.com/watch?v=Wdz7qdhmqv8>  
+Demo for Hackaday: <https://www.youtube.com/watch?v=aYZhYx-hUDQ>  
+Second test: <https://www.youtube.com/watch?v=Wdz7qdhmqv8>  
+First 3D audio quality test (in Spanish): <https://www.youtube.com/watch?v=Pvyww-hgYPw>  
+
 
 ![ScreenShot](pictures/OpenBinaural.jpg)  
+
+
+3D-printable ears  
+--
+The [left](binaural_mic_left.stl) and [right](binaural_mic_right.stl) ears, and the [potentiometer knob](potentiometer_knob.stl) can be 3D-printed in PLA or ABS. Flexible materials may create more realistic effects!  
+The support for the ears can be laser-cut out of 3mm plywood ([DXF file](wood_support.dxf)) or 3D printed ([STL file](wood_support_assembled.stl)).  
+
+
 ![ScreenShot](pictures/binauralMic.png)  
+
+Electronics  
+--
+The KiCad sources for the electronics can be found in the [Electronics](Electronics) folder.  
+Here are the [schematic](Electronics/stereo_mic_amplifier.pdf) and [layout](Electronics/stereo_mic_amplifier_layout.png).  
+The Gerber files, B/W layout in PDF, and CNC gcode files can be found [here](Electronics/Gerber).  
+
 ![ScreenShot](pictures/OpenBinaural_electronics.jpg)  
 
 Detailed ear canal
