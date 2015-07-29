@@ -11,6 +11,8 @@ Pictures
 --
 ![ScreenShot](pictures/stereo_mic_amplifier.png)  
 ![ScreenShot](pictures/stereo_mic_amplifier_layout.png)  
+![ScreenShot](pictures/stereo_mic_amplifier_schematic.png)  
+[Download the schematic in PDF](stereo_mic_amplifier.pdf)  
 
 
 ![ScreenShot](pictures/cnc_A_drills1.jpg)  
