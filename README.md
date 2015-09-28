@@ -8,13 +8,13 @@ Assembly instructions
 Demo recordings
 --
 * By [Philippe Benaim](https://www.youtube.com/channel/UCL3Ne8XJYRqAHHRvmHdczcw):
- * Un tour Montgolfière [link](https://www.youtube.com/watch?v=H2nlUVNs7Po)
- * Château de Chenonceau Outside [link](https://www.youtube.com/watch?v=rT2So4uhhjw)
- * Vacances Aout 2015 [link](https://www.youtube.com/watch?v=p6LAYfAAe6M)
+ * Un tour Montgolfière [(link)](https://www.youtube.com/watch?v=H2nlUVNs7Po)
+ * Château de Chenonceau Outside [(link)](https://www.youtube.com/watch?v=rT2So4uhhjw)
+ * Vacances Aout 2015 [(link)](https://www.youtube.com/watch?v=p6LAYfAAe6M)
 * By Carlosgs:
- * Brief interview with Richard 'RichRap' Horne, at 3D PrintShow London [link](https://www.youtube.com/watch?v=iwL12_NDhdw) *(note this audio has some ringing due to a faulty amplifier)*
- * Prueba del micrófono OpenBinaural (in Spanish) [link](https://www.youtube.com/watch?v=Pvyww-hgYPw)
- * Storm in London [link](https://www.youtube.com/watch?v=q60_r3WV450)
+ * Brief interview with Richard 'RichRap' Horne, at 3D PrintShow London [(link)](https://www.youtube.com/watch?v=iwL12_NDhdw) *(note this audio has some ringing due to a faulty amplifier)*
+ * Prueba del micrófono OpenBinaural (in Spanish) [(link)](https://www.youtube.com/watch?v=Pvyww-hgYPw)
+ * Storm in London [(link)](https://www.youtube.com/watch?v=q60_r3WV450)
 * YouTube channels with the OpenBinaural mic: [Henrik Paavo Nilsson](https://www.youtube.com/channel/UCeiF1qqDpM9bZQTWjmyOy_Q), [ASMR Relaxing audio](https://www.youtube.com/channel/UCa4j5ZCiVW3CebycXZzOLFw), [Whisperann](https://www.youtube.com/channel/UCvXcmePqMIBEGuu9DKQjNqg), and [UnMundoASMR Y mas cosas](https://www.youtube.com/channel/UCSRlT4mRnCUh6md30C0uORQ).
 * If you use the mic, please let me know, I'd love to *hear* about it! :-)
 
