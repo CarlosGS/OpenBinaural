@@ -3,7 +3,7 @@ Low-cost 3D-printable binaural microphone.
 
 Assembly instructions
 --
-[**Click here for the assembly instructions**](https://github.com/carlosgs/OpenBinaural/wiki)  
+[**Click here for the full assembly instructions**](https://github.com/carlosgs/OpenBinaural/wiki)  
 
 Demo recordings
 --
@@ -15,7 +15,7 @@ Demo recordings
  * Brief interview with Richard 'RichRap' Horne, at 3D PrintShow London [(link)](https://www.youtube.com/watch?v=iwL12_NDhdw) *(note this audio has some ringing due to a faulty amplifier)*
  * Prueba del micrófono OpenBinaural (in Spanish) [(link)](https://www.youtube.com/watch?v=Pvyww-hgYPw)
  * Storm in London [(link)](https://www.youtube.com/watch?v=q60_r3WV450)
-* YouTube channels with the OpenBinaural mic: [Henrik Paavo Nilsson](https://www.youtube.com/channel/UCeiF1qqDpM9bZQTWjmyOy_Q), [ASMR Relaxing audio](https://www.youtube.com/channel/UCa4j5ZCiVW3CebycXZzOLFw), [Whisperann](https://www.youtube.com/channel/UCvXcmePqMIBEGuu9DKQjNqg), and [UnMundoASMR Y mas cosas](https://www.youtube.com/channel/UCSRlT4mRnCUh6md30C0uORQ).
+* YouTube channels with the OpenBinaural mic (donations): [Henrik Paavo Nilsson](https://www.youtube.com/channel/UCeiF1qqDpM9bZQTWjmyOy_Q), [ASMR Relaxing audio](https://www.youtube.com/channel/UCa4j5ZCiVW3CebycXZzOLFw), [Whisperann](https://www.youtube.com/channel/UCvXcmePqMIBEGuu9DKQjNqg), and [UnMundoASMR Y mas cosas](https://www.youtube.com/channel/UCSRlT4mRnCUh6md30C0uORQ).
 * If you use the mic, please let me know, I'd love to *hear* about it! :-)
 
 
