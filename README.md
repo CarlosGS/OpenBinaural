@@ -19,7 +19,7 @@ Demo recordings
 * If you use the mic, please let me know, I'd love to *hear* about it! :-)
 
 
-Assembled OpenBinaural:  
+Assembled OpenBinaural microphone:  
 
 ![ScreenShot](pictures/OpenBinaural.jpg)  
 
