@@ -7,6 +7,10 @@ The circuit has been tested with the POM-5238P-R microphone capsules:
 
 CNC manufacture files (gerbers, FlatCAM project & gcodes) are available in the [Gerber](Gerber) folder.  
 
+Assembly instructions
+--
+[**Click here for the full assembly instructions**](https://github.com/carlosgs/OpenBinaural/wiki)  
+
 Pictures  
 --
 ![ScreenShot](pictures/stereo_mic_amplifier.png)  
