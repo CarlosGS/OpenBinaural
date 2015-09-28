@@ -1,7 +1,7 @@
 # OpenBinaural
 Low-cost 3D-printable binaural microphone.  
 
-DIY assembly instructions
+Assembly instructions
 --
 [**Click here for the assembly instructions**](https://github.com/carlosgs/OpenBinaural/wiki)  
 
