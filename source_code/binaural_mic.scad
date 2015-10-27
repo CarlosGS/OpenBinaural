@@ -152,7 +152,7 @@ translate([-ear_separation/2,0,0])
 ear_base_separation = ear_separation-ear_base_thickness*2;
 
 // Wood parts
-tripod_hole_diam = 5.9;
+tripod_hole_diam = 8.5;//5.9;
 
 wood_thickness = 3;
 wood_length = ear_base_separation;
@@ -206,8 +206,14 @@ module wood_support_right(laser_cutter_offset=0) {
 
 module wood_support_param(laser_cutter_offset=0,top=false) {
     difference() {
-        translate([-ear_base_separation/2+0.005,-screw_separation/2-wood_radius+0.005,-screw_separation/2-wood_radius+0.005])
-            cube([wood_length-0.01,screw_separation-0.01,wood_thickness-0.01]);
+        union() {
+            translate([-ear_base_separation/2+0.005,-screw_separation/2-wood_radius+0.005,-screw_separation/2-wood_radius+0.005])
+                cube([wood_length-0.01,screw_separation-0.01,wood_thickness-0.01]);
+            if(!top)
+                translate([0,0,-screw_separation/2-wood_radius+0.5])
+                    cylinder(r=tripod_hole_diam,h=6);
+                
+        }
         wood_support_left(laser_cutter_offset);
         wood_support_right(laser_cutter_offset);
         if(top) {
@@ -234,13 +240,14 @@ module wood_support_param(laser_cutter_offset=0,top=false) {
         } else {
             // Hole for tripod mount
             translate([0,0,-screw_separation/2-wood_radius]) {
-                cylinder(r=tripod_hole_diam/2-laser_cutter_offset,h=10,center=true);
-                translate([10,0,0])
+                cylinder(r=tripod_hole_diam/2-laser_cutter_offset,h=30,center=true);
+                /*translate([10,0,0])
                     cylinder(r=tripod_hole_diam/2-laser_cutter_offset,h=10,center=true);
                 translate([-10,0,0])
                     cylinder(r=tripod_hole_diam/2-laser_cutter_offset,h=10,center=true);
                 translate([0,-10,0])
                     cylinder(r=tripod_hole_diam/2-laser_cutter_offset,h=10,center=true);
+                */
             }
             // Slot for audio cable strain relief
             translate([-30,0,-screw_separation/2-wood_radius])
