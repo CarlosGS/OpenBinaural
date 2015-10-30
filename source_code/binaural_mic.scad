@@ -152,7 +152,7 @@ translate([-ear_separation/2,0,0])
 ear_base_separation = ear_separation-ear_base_thickness*2;
 
 // Wood parts
-tripod_hole_diam = 8.5;//5.9;
+tripod_hole_diam = 9.5;// Use 5.9 for self-tapping tripod version
 
 wood_thickness = 3;
 wood_length = ear_base_separation;
@@ -279,7 +279,7 @@ module wood_support_full() {
 }
 
 color("brown")
-    wood_support_full();
+    !wood_support_full();
 
 module wood_support_flat(laser_cutter_offset=0) {
     translate([10,-59,-ear_base_separation/2+0.1])
