@@ -35,6 +35,10 @@ The support for the ears can be laser-cut out of 3mm plywood ([DXF file](wood_su
 
 ![ScreenShot](pictures/binauralMic.png)  
 
+Tripod mount detail:  
+![](pictures/tripod_mount.jpg)  
+The metal insert can be found in eBay as *1/4" to 3/8" convert screw*  
+
 Electronics  
 --
 The KiCad sources for the electronics can be found in the [Electronics](Electronics) folder.  
@@ -67,6 +71,8 @@ If you need professional quality & high-performance, check out their Free Space 
 * The potentiometer knob model is derived from **John Ridley's**: <https://www.youmagine.com/designs/knob-for-potentiometer-parametric>
 
 * I want to thank [**Imperial College Advanced Hackspace**](http://icah.org.uk/) and [**Imperial College Robotics Society**](http://icrobotics.co.uk/) for providing the infrastructure (tools, 3D printers, laser cutters & material resources) that made this project possible. The community that has grown upon them is just amazing.  
+
+* Also thanks to Mr Rodrigo García Saura for sourcing the 1/4" to 3/8" convert screw for the tripod mount  
 
 Author & license  
 --
