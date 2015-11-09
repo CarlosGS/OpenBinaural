@@ -1,6 +1,8 @@
 # OpenBinaural
 Low-cost 3D-printable binaural microphone.  
 
+Project presented at [**OSHWDem 2015**](http://oshwdem.org/makers-2015/) (Open Source Hardware Demonstration in A Coruña, Spain) and featured in [**Hackaday**](http://hackaday.com/2015/06/28/3d-printing-binaural-microphones/)  
+
 Assembly instructions
 --
 [**Click here for the full assembly instructions**](https://github.com/carlosgs/OpenBinaural/wiki)  
@@ -12,6 +14,7 @@ Demo recordings
  * Château de Chenonceau Outside [(link)](https://www.youtube.com/watch?v=rT2So4uhhjw)
  * Vacances Aout 2015 [(link)](https://www.youtube.com/watch?v=p6LAYfAAe6M)
 * By Carlosgs:
+ * Sea shore in A Coruña, Spain [(link)](https://www.youtube.com/watch?v=49GC-DsRlKY)
  * Brief interview with Richard 'RichRap' Horne, at 3D PrintShow London [(link)](https://www.youtube.com/watch?v=iwL12_NDhdw) *(note this audio has some ringing due to a faulty amplifier)*
  * Prueba del micrófono OpenBinaural (in Spanish) [(link)](https://www.youtube.com/watch?v=Pvyww-hgYPw)
  * Storm in London [(link)](https://www.youtube.com/watch?v=q60_r3WV450)
