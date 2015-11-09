@@ -13,20 +13,20 @@
 $fa = 5; // Minimum angle for fragments [degrees]
 $fs = 0.5; // Minimum fragment size [mm]
 
-ear_rotation = -20;
+ear_rotation = -15;
+ear_vertical_rotation = 10;
 
-ear_base_diameter = 100;
+ear_base_diameter = 120;
 ear_canal_len_1 = 12;
 ear_canal_len_2 = 8;
 ear_canal_diam_1 = 5;
 ear_canal_diam_2 = 6;
 ear_canal_bump_height = 2;
 
-mic_diam = 10.5;
+mic_diam = 11;
 mic_len = 8;
 mic_transition_len = 1.5;
 
-ear_base_thickness = ear_canal_len_1 + ear_canal_len_2 + mic_len;
 
 
 screw_head_diam = 8;
@@ -35,7 +35,29 @@ screw_holder_thickness = 5;
 
 screw_separation = 40;
 
-ear_scale = 60/73.54;
+ear_scale = 68/73.54;
+
+ear_separation = 136;
+
+
+
+tripod_hole_diam = 10;// Use 5.9 for self-tapping tripod version
+
+wood_thickness = 3;
+
+
+wood_radius = screw_head_diam/2 + 4;
+
+font = "Comfortaa:style=Bold";
+brand = "OpenBinaural";
+letter_size = 7.5;
+
+
+
+ear_base_thickness = ear_canal_len_1 + ear_canal_len_2 + mic_len;
+ear_base_separation = ear_separation-ear_base_thickness*2;
+wood_length = ear_base_separation;
+
 
 module screw_hole() {
     rotate([0,90,0]) cylinder(r=screw_diam/2,h=ear_base_thickness);
@@ -51,14 +73,16 @@ module ear_left() {
                     import("ear_left.stl");
 }
 
+
+
 module ear_left_full() {
     difference() {
         union() {
-            ear_left();
+            rotate([0,0,ear_vertical_rotation]) ear_left();
             intersection() {
                 rotate([0,-90,0])
                     hull() {
-                    linear_extrude(height=0.01,center=true)
+                    rotate([ear_vertical_rotation,0,0]) linear_extrude(height=0.01,center=true)
                         projection(cut=true)
                             rotate([0,90,0]) ear_left();
                     translate([0,0,ear_base_thickness])
@@ -69,7 +93,7 @@ module ear_left_full() {
                     sphere(r=ear_base_diameter/2);
                 // Bevel
                 translate([-ear_base_thickness+ear_base_diameter/2,0,0])
-                    sphere(r=ear_base_diameter/2+20);
+                    sphere(r=ear_base_diameter/2+24);
             }
         }
         
@@ -134,7 +158,7 @@ module ear_right_full() {
 
 
 
-ear_separation = 136;
+
 
 
 // Draw the canal section
@@ -149,20 +173,11 @@ translate([-ear_separation/2,0,0])
     ear_right_full();
 
 
-ear_base_separation = ear_separation-ear_base_thickness*2;
+
+
+
 
 // Wood parts
-tripod_hole_diam = 9.5;// Use 5.9 for self-tapping tripod version
-
-wood_thickness = 3;
-wood_length = ear_base_separation;
-
-wood_radius = screw_head_diam/2 + 4;
-
-font = "Comfortaa:style=Bold";
-brand = "OpenBinaural";
-letter_size = 7.5;
-
 
 module wood_support_left(laser_cutter_offset=0) {
     translate([ear_base_separation/2,0,0])
@@ -279,7 +294,7 @@ module wood_support_full() {
 }
 
 color("brown")
-    !wood_support_full();
+    wood_support_full();
 
 module wood_support_flat(laser_cutter_offset=0) {
     translate([10,-59,-ear_base_separation/2+0.1])
