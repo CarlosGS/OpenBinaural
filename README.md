@@ -48,6 +48,12 @@ Detailed ear canal
 ![ScreenShot](pictures/earCanal.png)  
 ![ScreenShot](pictures/earCanal_detail.png)  
 
+Where to buy
+--
+I currently have no plans to sell this microphone, it has an open license so **anyone can build it or sell it** (as long as they provide attribution and publish their modifications as open too).  
+Please refer to the following links if you just need a binaural microphone that works out of the box:  
+- [**3Dio**](http://3diosound.com/)  
+- [**SR3D**](https://binauralhead.wordpress.com/2015/08/18/sr3d-nature-binaural-microphone/)  
 
 Acknowledgments  
 --
