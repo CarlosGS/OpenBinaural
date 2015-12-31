@@ -1,7 +1,7 @@
 # OpenBinaural
 Low-cost 3D-printable binaural microphone.  
 
-Project presented at [**OSHWDem 2015**](http://oshwdem.org/makers-2015/) (Open Source Hardware Demonstration in A Coruña, Spain) and featured in [**Hackaday**](http://hackaday.com/2015/06/28/3d-printing-binaural-microphones/)  
+Project presented at [**OSHWDem 2015**](http://oshwdem.org/makers-2015/) (Open Source Hardware Demonstration in A Coruña, Spain) and [**Maker Faire Bilbao 2015**](http://bilbaomakerfaire.com/meet-the-makers-2015/). First featured in [**Hackaday**](http://hackaday.com/2015/06/28/3d-printing-binaural-microphones/)  
 
 Assembly instructions
 --
