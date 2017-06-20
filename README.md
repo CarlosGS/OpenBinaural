@@ -76,7 +76,7 @@ If you need professional quality & high-performance, check out their Free Space 
 
 Author & license  
 --
-Author: Carlos Garcia Saura (<http://www.carlosgs.es>)  
+Author: Carlos Garcia Saura (<https://github.com/CarlosGS/>)  
 License: CC-BY-SA (<http://creativecommons.org/licenses/by-sa/4.0/>)  
 
 
