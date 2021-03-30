@@ -1,7 +1,7 @@
 # OpenBinaural
 Low-cost 3D-printable binaural microphone.  
 
-Project presented at [**OSHWDem 2015**](http://oshwdem.org/makers-2015/) (Open Source Hardware Demonstration in A Coruña, Spain) and [**Maker Faire Bilbao 2015**](http://bilbaomakerfaire.com/meet-the-makers-2015/). First featured in [**Hackaday**](http://hackaday.com/2015/06/28/3d-printing-binaural-microphones/)  
+Project presented at [**OSHWDem 2015**](http://oshwdem.org/) (Open Source Hardware Demonstration in A Coruña, Spain) and [**Maker Faire Bilbao 2015**](http://bilbaomakerfaire.com/meet-the-makers-2015/). First featured in [**Hackaday**](http://hackaday.com/2015/06/28/3d-printing-binaural-microphones/)  
 
 Assembly instructions
 --
@@ -57,7 +57,7 @@ Please refer to the following links if you just need a binaural microphone that 
 Acknowledgments  
 --
 * The awesome ear model was designed by **Jonathan March**:  
-<http://www.thingiverse.com/thing:499001>, <http://professorgreenscreen.com/>  
+<http://www.thingiverse.com/thing:499001>  
 For this project, the STL was modified with [FreeCAD](http://freecadweb.org/) and [Blender](http://www.blender.org/)  
 
 * Great inspiration was taken from [**3Dio**](http://3diosound.com/).
