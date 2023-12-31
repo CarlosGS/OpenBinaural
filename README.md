@@ -1,7 +1,8 @@
-# OpenBinaural
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10446511.svg)](https://doi.org/10.5281/zenodo.10446511)
+# OpenBinaural 3D microphone design
 Low-cost 3D-printable binaural microphone.  
 
-Project presented at [**OSHWDem 2015**](http://oshwdem.org/) (Open Source Hardware Demonstration in A Coruña, Spain) and [**Maker Faire Bilbao 2015**](http://bilbaomakerfaire.com/meet-the-makers-2015/). First featured in [**Hackaday**](http://hackaday.com/2015/06/28/3d-printing-binaural-microphones/)  
+Project presented at [**OSHWDem 2015**](http://oshwdem.org/) (Open Source Hardware Demonstration in A Coruña, Spain) and [**Maker Faire Bilbao 2015**](http://bilbaomakerfaire.com/meet-the-makers-2015/). First featured in [**Hackaday**](http://hackaday.com/2015/06/28/3d-printing-binaural-microphones/).
 
 Assembly instructions
 --
@@ -26,7 +27,7 @@ Assembled OpenBinaural microphone:
 3D-printable ears  
 --
 The [left](binaural_mic_left.stl) and [right](binaural_mic_right.stl) ears, and the [potentiometer knob](potentiometer_knob.stl) can be 3D-printed in PLA or ABS. Flexible materials may create more realistic effects!  
-The support for the ears can be laser-cut out of 3mm plywood ([DXF file](wood_support.dxf)) or 3D printed ([STL file](wood_support_assembled.stl)).  
+The support for the ears can be laser-cut out of 3mm plywood ([DXF file](wood_support.dxf)) or 3D printed ([STL file](wood_support_assembled_simplified.stl)).
 
 
 ![ScreenShot](pictures/binauralMic.png)  
@@ -37,6 +38,9 @@ The metal insert can be found in eBay as *1/4" to 3/8" convert screw*
 
 Electronics  
 --
+
+**Note: The amplifier circuit is very outdated and noisy! Instead I recommend connecting the microphone capsules directly to the recorder. See [here](https://github.com/carlosgs/OpenBinaural/wiki#if-you-have-a-gopro-you-dont-need-the-amplifier-circuit) for an example.**
+
 The KiCad sources for the electronics can be found in the [Electronics](Electronics) folder.  
 Here are the [schematic](Electronics/stereo_mic_amplifier.pdf) and [layout](Electronics/pictures/stereo_mic_amplifier_layout.png).  
 The Gerber files, B/W layout in PDF, and CNC gcode files can be found [here](Electronics/Gerber).  
@@ -52,7 +56,9 @@ Where to buy
 --
 I currently have no plans to sell this microphone, it has an open license so **anyone can build it or sell it** (as long as they provide attribution and publish their modifications as open too).  
 Please refer to the following links if you just need a binaural microphone that works out of the box:  
-- [**3Dio**](http://3diosound.com/)  
+
+- [**3Dio**](https://3diosound.com/)
+- [**SR3D**](https://www.sr3d.co.uk/), [**Ebay**](https://www.ebay.co.uk/str/sr3dbinauralmicrophones)
 
 Acknowledgments  
 --
@@ -75,3 +81,26 @@ Author: Carlos Garcia Saura (<https://github.com/CarlosGS/>)
 License: CC-BY-SA (<http://creativecommons.org/licenses/by-sa/4.0/>)  
 
 
+Please cite as:
+--
+
+Latex / Bibtex citation:
+
+```bibtex
+@misc{garciasaura2015binaural,
+  author = {Garcia-Saura, Carlos},
+  title = {Open Binaural 3D microphone design},
+  publisher = {GitHub},
+  year = {2015},
+  doi = {10.5281/ZENODO.10446511},
+  url = {https://doi.org/10.5281/ZENODO.10446511}
+}
+```
+
+APA style citation:
+
+- García-Saura, C. (2015). Open Binaural 3D microphone design. GitHub. https://doi.org/10.5281/ZENODO.10446511
+
+Also check out my previous work _"3D Video with Binaural Audio"_:
+
+- García-Saura, C. (2011). Vídeo en 3D con Sonido Binaural. Congreso del XXIV Certamen Jóvenes Investigadores INJUVE, CEULAJ Málaga. INJUVE. https://doi.org/10.5281/ZENODO.10445722
